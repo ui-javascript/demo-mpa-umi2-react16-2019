@@ -30,20 +30,6 @@ function getEntry(globPath) {
       return 
     }
 
-    // 生成唯一id, 防止多个目录下路径重复
-    sections.shift()
-    sections.pop()
-    let uuid = `${sections.join('-')}-${moduleName}`
-    // console.log(uuid)
-
-    // 模板路径
-    let templatePath = `./${sections[0]}/${sections[1]}/${moduleName}.html`
-    if (!fs.existsSync(templatePath)) {
-      templatePath = "./public/template.html"
-    }
-    // console.log(templatePath)
-
-
     // 页面信息
     let infoPath = `./${sections[0]}/${sections[1]}/${moduleName}.json`
     if (!fs.existsSync(infoPath)) {
@@ -52,15 +38,37 @@ function getEntry(globPath) {
 
     let context = JSON.parse(fs.readFileSync(infoPath, "utf-8"))
     // console.log(context)
+
+    // 生成唯一id, 防止多个目录下路径重复
+    sections.shift()
+    sections.pop()
+    let uuid = `${sections.join('-')}-${moduleName}`
+    // console.log(uuid)
+
     // entries[moduleName] = [entry, { context }]
-    entries[uuid] = [entry, { context }]
+    entries[uuid] = [entry, { 
+      context
+    }]
   });
 
   console.log(entries)
 
   return {
     entry: entries,
-    html: {},
+    html: {
+      // 默认模板
+      template: './public/template.ejs',
+    },
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          chunks: 'all',
+          minChunks: 2,
+          name: 'vendors',
+          test: /[\\/]node_modules[\\/]/,
+        },
+      },
+    },
   };
 }
 
