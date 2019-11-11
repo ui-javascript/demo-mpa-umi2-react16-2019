@@ -8,5 +8,5 @@
 
 # FIXME
 
-- (0 , _hooks.default) is not a function
+- (0 , _hooks.default) is not a function --> js没问题,ts/tsx报错 --> 缺少配置??
 

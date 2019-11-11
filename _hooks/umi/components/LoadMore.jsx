@@ -1,15 +1,6 @@
 import { List, Button, Avatar } from 'antd';
 import React from 'react';
-import useLoadMore, { FnParams } from '@umijs/hooks';
-
-interface Item {
-  id: number;
-  title: string;
-}
-interface Result {
-  total: number;
-  data: Item[];
-}
+import { useLoadMore } from '@umijs/hooks';
 
 const dataSource = [
   {
@@ -54,7 +45,7 @@ const dataSource = [
   },
 ];
 
-const asyncFn = ({ pageSize, offset }: FnParams): Promise<Result> =>
+const asyncFn = ({ pageSize, offset }) =>
   new Promise(resolve => {
     setTimeout(() => {
       resolve({
@@ -64,15 +55,11 @@ const asyncFn = ({ pageSize, offset }: FnParams): Promise<Result> =>
     }, 1000);
   });
 
-const LoadMore: React.FC = () => {
-
-  const { data, loading, loadingMore, reload, loadMore, total, noMore } = useLoadMore<Result, Item>(
-    asyncFn,
-    {
-      initPageSize: 3,
-      incrementSize: 4,
-    },
-  );
+export default () => {
+  const { data, loading, loadingMore, reload, loadMore, total, noMore } = useLoadMore(asyncFn, {
+    initPageSize: 3,
+    incrementSize: 4,
+  });
 
   const renderFooter = () => (
     <>
@@ -84,7 +71,14 @@ const LoadMore: React.FC = () => {
 
       {noMore && <span>No more data</span>}
 
-      <span style={{ float: 'right', fontSize: 12 }}>total: {total}</span>
+      <span
+        style={{
+          float: 'right',
+          fontSize: 12,
+        }}
+      >
+        total: {total}
+      </span>
     </>
   );
 
@@ -115,5 +109,3 @@ const LoadMore: React.FC = () => {
     </div>
   );
 };
-
-export default LoadMore

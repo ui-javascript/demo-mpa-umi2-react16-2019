@@ -1,30 +1,10 @@
 import React from 'react';
 import { Button, Col, Form, Input, Row, Table, Select } from 'antd';
-import { WrappedFormUtils } from 'antd/lib/form/Form';
-
-import useAntdTable, { FnParams } from '@umijs/hooks';
+import { useAntdTable } from '@umijs/hooks';
 
 const { Option } = Select;
 
-interface Item {
-  name: {
-    last: string;
-  };
-  email: string;
-  phone: string;
-  gender: 'male' | 'female';
-}
-
-interface Result {
-  total: number;
-  data: Item[];
-}
-
-interface AppListProps {
-  form: WrappedFormUtils;
-}
-
-const getTableData = ({ current, pageSize, ...rest }: FnParams<Item>) => {
+const getTableData = ({ current, pageSize, ...rest }) => {
   console.log(current, pageSize, rest);
   return fetch(`https://randomuser.me/api?results=55&page=${current}&size=${pageSize}`)
     .then(res => res.json())
@@ -34,15 +14,13 @@ const getTableData = ({ current, pageSize, ...rest }: FnParams<Item>) => {
     }));
 };
 
-const DynamicList = (props: AppListProps) => {
+const AppList = props => {
   const { getFieldDecorator } = props.form;
-  const { tableProps, search } = useAntdTable<Result, Item>(getTableData, {
+  const { tableProps, search } = useAntdTable(getTableData, {
     defaultPageSize: 5,
     form: props.form,
   });
-
   const { type, changeType, submit, reset } = search || {};
-
   const columns = [
     {
       title: 'name',
@@ -61,7 +39,6 @@ const DynamicList = (props: AppListProps) => {
       dataIndex: 'gender',
     },
   ];
-
   const advanceSearchForm = (
     <div>
       <Form>
@@ -83,11 +60,21 @@ const DynamicList = (props: AppListProps) => {
           </Col>
         </Row>
         <Row>
-          <Form.Item style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Form.Item
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+            }}
+          >
             <Button type="primary" onClick={submit}>
               Search
             </Button>
-            <Button onClick={reset} style={{ marginLeft: 16 }}>
+            <Button
+              onClick={reset}
+              style={{
+                marginLeft: 16,
+              }}
+            >
               Reset
             </Button>
             <Button type="link" onClick={changeType}>
@@ -98,21 +85,41 @@ const DynamicList = (props: AppListProps) => {
       </Form>
     </div>
   );
-
   const searchFrom = (
-    <div style={{ marginBottom: 16 }}>
-      <Form style={{ display: 'flex', justifyContent: 'flex-end' }}>
+    <div
+      style={{
+        marginBottom: 16,
+      }}
+    >
+      <Form
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+        }}
+      >
         {getFieldDecorator('gender', {
           initialValue: '',
         })(
-          <Select style={{ width: 120, marginRight: 16 }} onChange={submit}>
+          <Select
+            style={{
+              width: 120,
+              marginRight: 16,
+            }}
+            onChange={submit}
+          >
             <Option value="">all</Option>
             <Option value="male">male</Option>
             <Option value="female">female</Option>
           </Select>,
         )}
         {getFieldDecorator('name')(
-          <Input.Search placeholder="enter name" style={{ width: 240 }} onSearch={submit} />,
+          <Input.Search
+            placeholder="enter name"
+            style={{
+              width: 240,
+            }}
+            onSearch={submit}
+          />,
         )}
         <Button type="link" onClick={changeType}>
           Advanced Search
@@ -120,7 +127,6 @@ const DynamicList = (props: AppListProps) => {
       </Form>
     </div>
   );
-
   return (
     <div>
       {type === 'simple' ? searchFrom : advanceSearchForm}
@@ -129,4 +135,4 @@ const DynamicList = (props: AppListProps) => {
   );
 };
 
-export default Form.create()(DynamicList);
+export default Form.create()(AppList);
