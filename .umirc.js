@@ -71,6 +71,14 @@ export default {
     //   splitChunks: true,
     // }],
 
+    [
+      'umi-plugin-react',
+      {
+        antd: true,
+      },
+    ],
+    // 多页面配置
+    ['umi-plugin-mpa', getEntry(config.entry)],
     // example =========
     // ['umi-plugin-mpa', {
     //   entry: {
@@ -83,12 +91,5 @@ export default {
     //   },
     //   html: {},
     // }],
-    // [
-    //   'umi-plugin-react',
-    //   {
-    //     antd: true,
-    //   },
-    // ],
-    ['umi-plugin-mpa', getEntry(config.entry)]
   ],
 };

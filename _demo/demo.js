@@ -7,11 +7,13 @@ import 'antd/dist/antd.css';
 function App() {
   
     return (
-    <div>
+    <div className="p-5">
       Demo
     </div>
     );
   }
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
