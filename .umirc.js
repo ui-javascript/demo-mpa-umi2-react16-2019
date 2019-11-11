@@ -67,7 +67,7 @@ function getEntry(globPath) {
 
 export default {
   plugins: [
-    // ['../dist/index', {
+    // ['./dist/index', {
     //   splitChunks: true,
     // }],
 
@@ -83,7 +83,12 @@ export default {
     //   },
     //   html: {},
     // }],
-  
+    [
+      'umi-plugin-react',
+      {
+        antd: true,
+      },
+    ],
     ['umi-plugin-mpa', getEntry(config.entry)]
   ],
 };
