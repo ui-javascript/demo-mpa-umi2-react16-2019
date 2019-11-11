@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "install:tyarn": "tyarn install",
+    "dev": "umi dev",
+    "build": "umi build"
+  },
+  "dependencies": {
+    "@umijs/hooks": "^1.3.3",
+    "antd": "^3.25.1",
+    "umi": "^2.6.17",
+    "umi-plugin-mpa": "^1.2.2"
+  }
+}
