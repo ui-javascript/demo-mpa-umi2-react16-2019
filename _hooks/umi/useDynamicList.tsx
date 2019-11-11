@@ -3,10 +3,10 @@
 
 // import 'antd/dist/antd.css';
 
-// import Dynamic from './components/dynamic'
+// import DynamicList from './components/DynamicList'
 
 // function App() {
-//   return <div><Dynamic /></div>
+//   return <div><DynamicList /></div>
 // }
 
 // ReactDOM.render(<App />, document.getElementById('root'));

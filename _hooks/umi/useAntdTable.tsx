@@ -1,11 +1,11 @@
-// import React from 'react';
-// import ReactDOM from "react-dom"
+import React from 'react';
+import ReactDOM from "react-dom"
 
-// import 'antd/dist/antd.css';
-// import AppList from './components/table';
+import 'antd/dist/antd.css';
+import TableWithForm from './components/TableWithForm';
 
-// function App() {
-//     return <div><AppList /></div>
-// }
+function App() {
+    return <div><TableWithForm /></div>
+}
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

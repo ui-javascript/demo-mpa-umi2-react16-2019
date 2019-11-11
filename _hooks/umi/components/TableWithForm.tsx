@@ -1,8 +1,12 @@
 import React from 'react';
+
 import { Button, Col, Form, Input, Row, Table, Select } from 'antd';
 import { WrappedFormUtils } from 'antd/lib/form/Form';
+// import { FormComponentProps } from 'antd/lib/form';
 
 import useAntdTable, { FnParams } from '@umijs/hooks';
+
+import 'antd/dist/antd.css';
 
 const { Option } = Select;
 
@@ -34,7 +38,8 @@ const getTableData = ({ current, pageSize, ...rest }: FnParams<Item>) => {
     }));
 };
 
-const AppList = (props: AppListProps) => {
+const TableWithForm = Form.create()((props: AppListProps) => {
+  
   const { getFieldDecorator } = props.form;
   const { tableProps, search } = useAntdTable<Result, Item>(getTableData, {
     defaultPageSize: 5,
@@ -127,6 +132,6 @@ const AppList = (props: AppListProps) => {
       <Table columns={columns} rowKey="email" {...tableProps} />
     </div>
   );
-};
+});
 
-export default Form.create()(AppList);
+export default TableWithForm;

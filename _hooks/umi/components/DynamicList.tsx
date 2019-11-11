@@ -1,12 +1,8 @@
 import React from 'react';
-
 import { Button, Col, Form, Input, Row, Table, Select } from 'antd';
 import { WrappedFormUtils } from 'antd/lib/form/Form';
-// import { FormComponentProps } from 'antd/lib/form';
 
 import useAntdTable, { FnParams } from '@umijs/hooks';
-
-import 'antd/dist/antd.css';
 
 const { Option } = Select;
 
@@ -38,7 +34,7 @@ const getTableData = ({ current, pageSize, ...rest }: FnParams<Item>) => {
     }));
 };
 
-const AppList = Form.create()((props: AppListProps) => {
+const DynamicList = (props: AppListProps) => {
   const { getFieldDecorator } = props.form;
   const { tableProps, search } = useAntdTable<Result, Item>(getTableData, {
     defaultPageSize: 5,
@@ -131,6 +127,6 @@ const AppList = Form.create()((props: AppListProps) => {
       <Table columns={columns} rowKey="email" {...tableProps} />
     </div>
   );
-});
+};
 
-export default AppList;
+export default Form.create()(DynamicList);

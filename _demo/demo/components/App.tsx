@@ -5,7 +5,7 @@ import styles from './foo.less';
 function App() {
     return (
       <div>
-        <h1 className={styles.normal}>Foo222222 index</h1>
+        <h1 className={styles.normal}>Demo1</h1>
       </div>
     );
   }

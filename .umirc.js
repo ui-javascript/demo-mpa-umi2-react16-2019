@@ -83,12 +83,12 @@ export default {
     //   },
     //   html: {},
     // }],
-    [
-      'umi-plugin-react',
-      {
-        antd: true,
-      },
-    ],
+    // [
+    //   'umi-plugin-react',
+    //   {
+    //     antd: true,
+    //   },
+    // ],
     ['umi-plugin-mpa', getEntry(config.entry)]
   ],
 };

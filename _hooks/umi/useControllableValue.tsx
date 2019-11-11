@@ -11,6 +11,7 @@ const ControllableComponent = (props: any) => {
 
   return <InputNumber value={state} onChange={setState} style={{ width: 300 }} />;
 };
+
 const App = () => {
   const [state, setState] = useState<number>(0);
   const increment = () => {
