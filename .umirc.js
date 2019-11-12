@@ -16,7 +16,7 @@ function getEntry(globPath) {
 
 
   glob.sync(globPath).forEach(function (entry) {
- 
+
     // 切割路径 --> [ '.', 'pages', 'foo.js' ]
     let sections = entry.split('/').splice(-3)
     // console.log(sections)
@@ -27,7 +27,7 @@ function getEntry(globPath) {
 
     // 跳过不符合入口规则的文件
     if (!shouldReadAsEntry(moduleName)) {
-      return 
+      return
     }
 
     // 页面信息
@@ -46,7 +46,7 @@ function getEntry(globPath) {
     // console.log(uuid)
 
     // entries[moduleName] = [entry, { context }]
-    entries[uuid] = [entry, { 
+    entries[uuid] = [entry, {
       context
     }]
   });
@@ -57,7 +57,7 @@ function getEntry(globPath) {
     entry: entries,
     html: {
       // 默认模板
-      template: './public/template.ejs',
+      template: config.template,
     },
     splitChunks: {
       cacheGroups: {
