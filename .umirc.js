@@ -3,8 +3,8 @@ const path = require("path");
 const fs = require("fs");
 
 // 配置
-import config from "./config"
-// console.log(config)
+import CONFIG from "./config"
+// console.log(CONFIG)
 
 // 是否小写字母开头
 function shouldReadAsEntry(moduleName) {
@@ -17,8 +17,11 @@ function getEntry(globPath) {
 
   glob.sync(globPath).forEach(function (entry) {
 
-    // 切割路径 --> [ '.', 'pages', 'foo.js' ]
-    let sections = entry.split('/').splice(-3)
+    // 切割路径 --> [ '.', '_project', 'module', 'foo.js' ]
+    // --> ['_project', 'module', 'foo.js' ]
+    // --> ['_project', 'module' ]
+    // --> ['module' ]
+    let sections = entry.split('/').splice(1)
     // console.log(sections)
 
     // 模块名称 --> 'foo'
@@ -30,19 +33,31 @@ function getEntry(globPath) {
       return
     }
 
+    // 已获取模块名，section移除最后一个
+    sections.pop()
+
     // 页面信息
-    let infoPath = `./${sections[0]}/${sections[1]}/${moduleName}.json`
+    let infoPath = `./${sections.join('/')}/${moduleName}.json`
     if (!fs.existsSync(infoPath)) {
-      infoPath = "./public/template.json"
+      infoPath = CONFIG.meta
     }
 
     let context = JSON.parse(fs.readFileSync(infoPath, "utf-8"))
     // console.log(context)
 
-    // 生成唯一id, 防止多个目录下路径重复
+    // 已获取路径参数, 去掉section的工程名
     sections.shift()
-    sections.pop()
-    let uuid = `${sections.join('-')}-${moduleName}`
+
+    // 生成唯一id, 防止多个目录下路径重复
+    let prefix = ''
+    // 除了moduleName与当前文件名前缀是否一致, 且层级为1
+    // 其他情况将section串联，作为uuid的一部分
+    if (sections.length > 1 ||
+      (sections.length === 1 && moduleName.indexOf(sections[0]) !== 0)) {
+      prefix = `${sections.join('-')}-`
+    }
+
+    let uuid = `${prefix}${moduleName}`
     // console.log(uuid)
 
     // entries[moduleName] = [entry, { context }]
@@ -51,24 +66,26 @@ function getEntry(globPath) {
     }]
   });
 
-  console.log(entries)
+  console.log('-------入口--------')
+  console.log(JSON.stringify(entries).replace(/],/g, "],\n"))
 
   return {
     entry: entries,
     html: {
       // 默认模板
-      template: config.template,
+      template: CONFIG.template,
     },
-    splitChunks: {
-      cacheGroups: {
-        vendors: {
-          chunks: 'all',
-          minChunks: 2,
-          name: 'vendors',
-          test: /[\\/]node_modules[\\/]/,
-        },
-      },
-    },
+    // @FIXME 这里添加以后，页面会无法正常显示??
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendors: {
+    //       chunks: 'all',
+    //       minChunks: 2,
+    //       name: 'vendors',
+    //       test: /[\\/]node_modules[\\/]/,
+    //     },
+    //   },
+    // },
   };
 }
 
@@ -85,8 +102,9 @@ export default {
         antd: true,
       },
     ],
+
     // 多页面配置
-    ['umi-plugin-mpa', getEntry(config.entry)],
+    ['umi-plugin-mpa', getEntry(CONFIG.entry)],
     // example =========
     // ['umi-plugin-mpa', {
     //   entry: {

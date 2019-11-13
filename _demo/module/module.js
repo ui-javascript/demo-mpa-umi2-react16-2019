@@ -3,5 +3,5 @@ import ReactDOM from "react-dom"
 
 
 
-ReactDOM.render(<div>hello-demo1</div>, document.getElementById('root'));
+ReactDOM.render(<div>首页module</div>, document.getElementById('root'));
 
