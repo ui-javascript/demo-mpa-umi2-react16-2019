@@ -13,7 +13,7 @@ export default {
 
     // hooks轮子测试
     // entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
-    entry: './_hooks/react-use/*.js',
+    // entry: './_hooks/react-use/*.js',
 
     // umi-自带功能测试
     // entry: './_umi/*.js',
@@ -23,4 +23,7 @@ export default {
 
     // antd组件用例
     // entry: './_antd/upload/*.js',
+
+    // fetch请求
+    entry: './_fetch/reqwest/*.js',
 }

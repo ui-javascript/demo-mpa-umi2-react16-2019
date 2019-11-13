@@ -1,4 +1,4 @@
-import {Button, Upload, Icon, message } from "antd"
+import {Button, Upload, Icon, message, Divider } from "antd"
 
 import reqwest from 'reqwest';
 
@@ -68,19 +68,24 @@ class Demo extends React.Component {
     return (
       <div className="mt-5">
         <Upload {...props}>
-          <Button>
-            <Icon type="upload" /> 手动上传
-          </Button>
+          <Button>手动上传</Button>
         </Upload>
+
         <Button
+          icon="upload"
           type="primary"
           onClick={this.handleUpload}
           disabled={fileList.length === 0}
           loading={uploading}
-          style={{ marginTop: 16 }}
+          style={{
+            marginTop: 16,
+            // marginLeft: 10
+          }}
         >
           {uploading ? '上传中' : '开始上传'}
         </Button>
+
+
       </div>
     );
   }
@@ -119,7 +124,9 @@ function App() {
       </Button>
     </Upload>
 
-    <Demo className="mt-5" />
+    <Divider />
+
+    <Demo />
 
     </div>
   );
