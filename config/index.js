@@ -19,11 +19,12 @@ export default {
     // entry: './_umi/*.js',
 
     // 日常一波增删改查
-    // entry: './_crud/form/*.js',
+    // entry: './_crud/form-render/*.js',
 
     // antd组件用例
     // entry: './_antd/upload/*.js',
 
     // fetch请求
-    entry: './_fetch/reqwest/*.js',
+    // entry: './_fetch/reqwest/*.js',
+    entry: './_fetch/axios/*.js',
 }

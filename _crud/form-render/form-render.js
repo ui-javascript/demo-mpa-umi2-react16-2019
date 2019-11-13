@@ -17,7 +17,7 @@ const propSchema = {
       "title": "图片",
       "type": "string",
       "format": "image",
-      "default": "'https://img.alicdn.com/tfs/TB1P8p2uQyWBuNjy0FpXXassXXa-750-1334.png'"
+      "default": "https://img.alicdn.com/tfs/TB1P8p2uQyWBuNjy0FpXXassXXa-750-1334.png"
     },
     "disabledDemo": {
       "title": "不可用",
