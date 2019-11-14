@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
-    
+
     <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/tailwindcss/0.7.3/utilities.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/antd/3.16.6/antd.min.css" rel="stylesheet">
-    
+
 </head>
 <body>
-    <div id="root" class="p-5"></div>
+
+<!--<% if (htmlWebpackPlugin.options._browserPage) { %>-->
+<!--    <ul>-->
+<!--        <% for(var i=0; i< htmlWebpackPlugin.options._browserPage.length; i++) {%>-->
+<!--            <li>-->
+<!--                <a href='<%= htmlWebpackPlugin.options._browserPage[i] %>'>-->
+<!--                    <%= htmlWebpackPlugin.options._browserPage[i] %>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        <% } %>-->
+<!--    </ul>-->
+
+<!--    <hr />-->
+<!--<% } %>-->
+
+
+<div id="root" class="p-5"></div>
 </body>
 </html>

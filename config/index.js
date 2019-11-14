@@ -12,7 +12,7 @@ export default {
     // entry: './_demo/module/*.{js,tsx}',
 
     // hooks轮子测试
-    // entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
+    entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
     // entry: './_hooks/react-use/*.js',
 
     // umi-自带功能测试
@@ -26,5 +26,5 @@ export default {
 
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
-    entry: './_fetch/axios/*.js',
+    // entry: './_fetch/axios/*.js',
 }

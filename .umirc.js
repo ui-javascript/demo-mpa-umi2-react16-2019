@@ -5,9 +5,17 @@ const fs = require("fs");
 // 配置
 import CONFIG from "./config"
 // console.log(CONFIG)
+let browserPages = []
 
-// 是否小写字母开头
+const port = process.env.port || 9527
+
+
+function isProd () {
+  return process.env.NODE_ENV === 'production'
+}
+
 function shouldReadAsEntry(moduleName) {
+  // 是否小写字母开头
   return moduleName.charAt(0).match(/^.*[a-z]+.*$/)
 }
 
@@ -59,15 +67,18 @@ function getEntry(globPath) {
 
     let uuid = `${prefix}${moduleName}`
     // console.log(uuid)
+    browserPages.push(`http://localhost:${port}/${uuid}.html`)
 
-    // entries[moduleName] = [entry, { context }]
     entries[uuid] = [entry, {
       context
     }]
   });
 
-  console.log('-------入口--------')
-  console.log(JSON.stringify(entries).replace(/],/g, "],\n"))
+  console.log('-------页面--------')
+  console.log(browserPages)
+
+  // console.log('-------入口--------')
+  // console.log(JSON.stringify(entries).replace(/],/g, "],\n"))
 
   return {
     entry: entries,
@@ -89,6 +100,19 @@ function getEntry(globPath) {
   };
 }
 
+console.log('-------环境--------')
+console.log(process.env.NODE_ENV)
+
+let mpaConfig = getEntry(CONFIG.entry);
+
+// @TODO
+// if (!isProd()) {
+//   for (let index in mpaConfig.entry) {
+//     Object.assign(mpaConfig.entry[index], {
+//       _browserPage: browserPages,
+//     })
+//   }
+// }
 
 export default {
   plugins: [
@@ -104,7 +128,7 @@ export default {
     ],
 
     // 多页面配置
-    ['umi-plugin-mpa', getEntry(CONFIG.entry)],
+    ['umi-plugin-mpa', mpaConfig],
     // example =========
     // ['umi-plugin-mpa', {
     //   entry: {
