@@ -7,8 +7,12 @@ import CONFIG from "./config"
 // console.log(CONFIG)
 let browserPages = []
 
-const port = process.env.port || 9527
+const port = process.env.PORT || 8000
+// console.log('-------端口--------')
+// console.log(port)
 
+// console.log('-------环境--------')
+// console.log(process.env.NODE_ENV)
 
 function isProd () {
   return process.env.NODE_ENV === 'production'
@@ -100,12 +104,11 @@ function getEntry(globPath) {
   };
 }
 
-console.log('-------环境--------')
-console.log(process.env.NODE_ENV)
+
 
 let mpaConfig = getEntry(CONFIG.entry);
 
-// @TODO
+// @TODO 向html注入参数
 // if (!isProd()) {
 //   for (let index in mpaConfig.entry) {
 //     Object.assign(mpaConfig.entry[index], {
