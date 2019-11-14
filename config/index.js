@@ -7,7 +7,7 @@ export default {
     meta: "./template/template.json",
 
     // 路径写法示例
-    entry: './_demo/**/*.{js,tsx}',
+    // entry: './_demo/**/*.{js,tsx}',
     // entry: './_demo/*.js',
     // entry: './_demo/module/*.{js,tsx}',
 
@@ -29,5 +29,5 @@ export default {
     // entry: './_fetch/axios/*.js',
 
     // react-小技巧
-    // entry: './_tricks/**/*.js',
+    entry: './_tricks/**/*.js',
 }
