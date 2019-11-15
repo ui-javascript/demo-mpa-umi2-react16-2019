@@ -31,5 +31,8 @@ export default {
     // entry: './_tricks/**/*.js',
 
     // landing页 @deprecated --> 被我搞坏了...
-    entry: './_landing/antd-landing/index.js',
+    // entry: './_landing/antd-landing/index.js',
+
+    // 动画
+    entry: './_animation/react-spring/*.js',
 }

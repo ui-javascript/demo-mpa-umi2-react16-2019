@@ -4,7 +4,7 @@
 
 # 使用
 
-- 默认使用引入部分cdn的视图模板(./template/template-cdn.ejs ), 挂载节点-示例如下(./_demo/cdn.js)
+- 默认使用引入部分cdn的视图模板(./template/template-cdn.ejs ), 挂载节点-示例如下(./_demo/index.js)
 
 ```js
 // 已经引入了 React + ReactDOM + antd.css
@@ -28,6 +28,7 @@ ReactDOM.render(<App />, mountNode);
 - 打包优化
 - tailwindcss
 - 路由相关功能调整
+- admin`简单`骨架
 
 # FIXME
 

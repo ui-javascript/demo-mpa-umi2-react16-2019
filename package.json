@@ -25,6 +25,7 @@
     "react-dom": "^16.11.0",
     "react-github-button": "^0.1.11",
     "react-intl": "^3.6.0",
+    "react-spring": "^8.0.27",
     "react-use": "^13.6.2",
     "reqwest": "^2.0.5",
     "tailwindcss": "^1.1.3",
