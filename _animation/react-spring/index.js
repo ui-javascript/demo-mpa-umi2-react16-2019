@@ -1,21 +1,37 @@
-import {Button, TimePicker} from "antd"
+import ReactDOM from "react-dom"
+import {useSpring, animated} from 'react-spring'
 
-import moment from 'moment';
+function Fade() {
+  const props = useSpring({
+    opacity: 1,
+    from: {opacity: 0}
+  })
 
-function onChange(time, timeString) {
-  console.log(time, timeString);
+  return <animated.div style={props}>I will fade in</animated.div>
 }
 
-function App() {
+function Star() {
+  const props = useSpring({ x: 100, from: { x: 0 } })
   return (
-    <div>
-    <Button type="primary" icon="plus">Demo</Button>
+    <animated.svg strokeDashoffset={props.x}>
+      {/*<path d="..." />*/}
+    </animated.svg>
+  )
+}
 
-      <div className={"mt-5"}>
-        <TimePicker onChange={onChange} defaultOpenValue={moment('00:00:00', 'HH:mm:ss')} />
-      </div>
-    </div>
-  );
+function Number() {
+  const props = useSpring({ number: 1, from: { number: 0 } })
+  return <animated.span>{props.number}</animated.span>
+}
+
+
+
+function App() {
+  return [
+    <Fade key="fade" />
+    // , <Star key="star" />
+    , <Number key="number" />
+  ]
 }
 
 ReactDOM.render(<App />, mountNode);

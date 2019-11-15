@@ -34,5 +34,16 @@ export default {
     // entry: './_landing/antd-landing/index.js',
 
     // 动画
-    entry: './_animation/react-spring/*.js',
+    // entry: './_animation/react-spring/*.js',
+    // entry: './_animation/react-move/*.js',
+    // entry: './_animation/react-loading-skeleton/*.js',
+
+    // 播放器
+    // entry: './_player/react-player/*.js',
+
+    // 各种工具
+    // entry: './_tools/qrcode/*.js',
+
+    // 表格
+    entry: './_table/react-table/*.js',
 }

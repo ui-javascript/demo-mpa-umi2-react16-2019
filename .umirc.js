@@ -119,6 +119,7 @@ let mpaConfig = getEntry(CONFIG.entry);
 
 export default {
   plugins: [
+    // @TODO 打包配置相关
     // ['./dist/index', {
     //   splitChunks: true,
     // }],
@@ -157,5 +158,8 @@ export default {
     //   },
     //   html: {},
     // }],
+  ],
+  extraBabelPlugins: [
+    "babel-plugin-styled-components"
   ],
 };
