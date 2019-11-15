@@ -1,6 +1,5 @@
 export default {
     // 默认模板位置
-    // template: './template/template.ejs',
     template: './template/template-cdn.ejs',
 
     // 默认meta位置
@@ -11,8 +10,8 @@ export default {
     // entry: './_demo/*.js',
     // entry: './_demo/module/*.{js,tsx}',
 
-    // hooks轮子测试
-    // entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
+    // hooks-轮子测试
+    entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
     // entry: './_hooks/react-use/*.js',
 
     // umi-自带功能测试
@@ -29,5 +28,8 @@ export default {
     // entry: './_fetch/axios/*.js',
 
     // react-小技巧
-    entry: './_tricks/**/*.js',
+    // entry: './_tricks/**/*.js',
+
+    // landing页 @deprecated --> 被我搞坏了...
+    // entry: './_landing/antd-loading/index.js',
 }

@@ -127,7 +127,20 @@ export default {
       'umi-plugin-react',
       {
         antd: true,
+        dva: {
+          hmr: true,
+        },
+        // @FIXME umi-locale与react-intl在一些地方会有冲突
+        // locale: {
+        //   // default false
+        //   enable: true,
+        //   // default zh-CN
+        //   default: 'zh-CN',
+        //   // default true, when it is true, will use `navigator.language` overwrite default
+        //   baseNavigator: true,
+        // },
       },
+
     ],
 
     // 多页面配置
