@@ -11,7 +11,7 @@ export default {
     // entry: './_demo/module/*.{js,tsx}',
 
     // hooks-轮子测试
-    entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
+    // entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
     // entry: './_hooks/react-use/*.js',
 
     // umi-自带功能测试
@@ -31,5 +31,5 @@ export default {
     // entry: './_tricks/**/*.js',
 
     // landing页 @deprecated --> 被我搞坏了...
-    // entry: './_landing/antd-loading/index.js',
+    entry: './_landing/antd-landing/index.js',
 }
