@@ -4,7 +4,7 @@ import ReactDOM from "react-dom"
 import { Button, Switch } from 'antd';
 import { useBoolean } from '@umijs/hooks';
 
-import zhCN from 'antd/es/locale/zh_CN';
+// import zhCN from 'antd/es/locale/zh_CN';
 import 'antd/dist/antd.css';
 
 function App() {

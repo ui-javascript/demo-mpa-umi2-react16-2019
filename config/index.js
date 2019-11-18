@@ -23,6 +23,7 @@ export default {
     // antd组件用例
     // entry: './_antd/upload/*.js',
     entry: './_antd/table/*.js',
+    // entry: './_antd/doddle/*.js',
 
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
@@ -31,7 +32,7 @@ export default {
     // react-小技巧
     // entry: './_tricks/**/*.js',
 
-    // landing页 @deprecated --> 被我搞坏了...
+    // landing页
     // entry: './_landing/antd-landing/index.js',
 
     // 动画
