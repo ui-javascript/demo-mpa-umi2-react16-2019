@@ -22,6 +22,7 @@ export default {
 
     // antd组件用例
     // entry: './_antd/upload/*.js',
+    entry: './_antd/table/*.js',
 
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
@@ -45,5 +46,5 @@ export default {
     // entry: './_tools/qrcode/*.js',
 
     // 表格
-    entry: './_table/react-table/*.js',
+    // entry: './_table/react-table/*.js',
 }
