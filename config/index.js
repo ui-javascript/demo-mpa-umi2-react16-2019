@@ -17,12 +17,15 @@ export default {
     // umi-自带功能测试
     // entry: './_umi/*.js',
 
+    // 图表
+    entry: './_charts/g2-plot/*.js',
+
     // 日常一波增删改查
     // entry: './_crud/form-render/*.js',
 
     // antd组件用例
     // entry: './_antd/upload/*.js',
-    entry: './_antd/table/*.js',
+    // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
 
     // fetch请求

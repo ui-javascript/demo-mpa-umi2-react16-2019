@@ -4,10 +4,11 @@
 
 # 使用
 
+- nodejs: `v12.13.0`
 - 默认使用视图模板(./template/template-cdn.ejs ), 使用示例如下
 
 ```js
-// 文件路径: ./demo/index.js
+// 文件路径: ./_demo/index.js
 // cdn已经引入React + ReactDOM + antd.css 
 // 但antd组件还是需要按需引入
 import {Button} from "antd"

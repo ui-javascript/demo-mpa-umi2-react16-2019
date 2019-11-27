@@ -233,7 +233,7 @@ function App() {
     []
   )
 
-  const [data, setData] = React.useState(() => makeData(20))
+  const [data, setData] = React.useState(() => makeData(200))
   const [originalData] = React.useState(data)
   const [skipPageReset, setSkipPageReset] = React.useState(false)
 
