@@ -12,7 +12,7 @@ export default {
 
     // hooks-轮子测试
     // entry: './_hooks/**/*.{js,ts,tsx}',
-    entry: './_hooks/sunflower/*.js',
+    // entry: './_hooks/sunflower/*.js',
     // entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
     // entry: './_hooks/react-use/*.js',
 
@@ -26,6 +26,7 @@ export default {
 
     // 日常一波增删改查
     // entry: './_crud/form-render/*.js',
+    entry: './_crud/antd-schema-form/*.js',
 
     // 地图
     // entry: './_map/amap/**/*.js',

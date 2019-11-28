@@ -2908,6 +2908,17 @@ antd-password-input-strength@^1.1.1:
   dependencies:
     zxcvbn "^4.4.2"
 
+antd-schema-form@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.npm.taobao.org/antd-schema-form/download/antd-schema-form-3.2.0.tgz#8b8e272647c114d3787e9578733d7ecc375f770e"
+  integrity sha1-i44nJkfBFNN4fpV4cz1+zDdfdw4=
+  dependencies:
+    classnames "^2.2.6"
+    immutability-helper "^3.0.1"
+    lodash-es "^4.17.15"
+    moment "^2.24.0"
+    prop-types "^15.7.2"
+
 antd@3.x, antd@^3.22.2, antd@^3.25.1:
   version "3.25.1"
   resolved "https://registry.npm.taobao.org/antd/download/antd-3.25.1.tgz#c23732e63fc01fed30d9ab708e9ef4e71527ed82"
@@ -11035,7 +11046,7 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
-lodash-es@^4.17.14, lodash-es@^4.17.5, lodash-es@^4.2.1:
+lodash-es@^4.17.14, lodash-es@^4.17.15, lodash-es@^4.17.5, lodash-es@^4.2.1:
   version "4.17.15"
   resolved "https://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.15.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash-es%2Fdownload%2Flodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
   integrity sha1-Ib2Wg5NUQS8j16EDQOXqxu5FXXg=
