@@ -37,8 +37,17 @@ export default {
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
 
-    // uxcore组件用例
-    entry: './_uxcore/*.js',
+    // uxcore-组件用例
+    // entry: './_uxcore/*.js',
+
+    // evergreen-组件用例
+    // entry: './_evergreen/*.js',
+
+    // evergreen-组件用例
+    entry: './_blueprint/*.js',
+
+    // ice-组件用例
+    // entry: './_ice-ui/*.js',
 
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
@@ -55,11 +64,11 @@ export default {
     // entry: './_animation/react-move/*.js',
     // entry: './_animation/react-loading-skeleton/*.js',
 
-    // 播放器
-    // entry: './_player/react-player/*.js',
 
     // 各种工具
     // entry: './_tools/qrcode/*.js',
+    // entry: './_tools/**/*.js',
+    // entry: './_tools/react-player/*.js',
 
     // 表格
     // entry: './_table/react-table/*.js',

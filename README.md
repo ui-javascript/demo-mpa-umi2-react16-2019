@@ -22,7 +22,7 @@ ReactDOM.render(<App />, mountNode);
 
 - 入口entry: 开头为小写字母且不是`use`的js文件
 - 如果创建`和entry同名`的`.ejs`文件，会覆盖默认模板(优先级更高)
-- 如果不创建`index`的入口，umi-plugin-mpa会自动生成index.html(简单的url地址导航页)
+- 如果不创建`index.js`入口，umi-plugin-mpa会默认生成index.html(url导航)
 - 使用到`react-hooks`功能的部分, 需要引入react-dom, 否则估计会报错!! 
 
 # TODO
@@ -32,7 +32,13 @@ ReactDOM.render(<App />, mountNode);
 - 路由功能调整
 - admin`简单骨架`
 
-# FIXME
+# FAQ
+
+- scss Module build failed
+
+```
+使用 sass 时需在项目目录安装 node-sass 和 sass-loader 依赖
+```
 
 - 打包配置出错
 
