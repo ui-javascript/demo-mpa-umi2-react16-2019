@@ -32,7 +32,7 @@ class EditableCell extends React.Component {
             if (error && error[e.currentTarget.id]) {
                 return;
             }
-            // this.toggleEdit();
+            this.toggleEdit();
             handleSave({ ...record, ...values });
         });
     };
@@ -94,16 +94,19 @@ class EditableTable extends React.Component {
             {
                 title: 'name',
                 dataIndex: 'name',
-                width: '30%',
+                // width: '30%',
                 editable: true,
             },
             {
                 title: 'age',
                 dataIndex: 'age',
+                editable: true,
             },
             {
                 title: 'address',
                 dataIndex: 'address',
+                editable: true,
+                // ellipsis: true,
             },
             {
                 title: 'operation',
@@ -195,6 +198,7 @@ class EditableTable extends React.Component {
                     Add a row
                 </Button>
                 <Table
+                    style={{ width: 200 }}
                     components={components}
                     rowClassName={() => 'editable-row'}
                     bordered

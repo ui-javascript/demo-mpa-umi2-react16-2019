@@ -45,7 +45,7 @@ function getEntry(globPath) {
       return
     }
 
-    // 已获取模块名，section移除最后一个
+    // 已获取模块名，sections移除最后一个
     sections.pop()
 
     // 页面信息
@@ -160,6 +160,7 @@ export default {
     // }],
   ],
   extraBabelPlugins: [
+    // styled-components支持
     "babel-plugin-styled-components"
   ],
 };

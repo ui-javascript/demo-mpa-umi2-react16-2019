@@ -1,5 +1,6 @@
 import react from "react"
 import ReactDOM from "react-dom"
+
 import 'antd/dist/antd.css';
 
 import { Table } from 'antd';
@@ -148,5 +149,5 @@ class DragSortingTable extends React.Component {
     }
 }
 
-ReactDOM.render(<DragSortingTable />, mountNode);
+ReactDOM.render(<DragSortingTable />, document.getElementById('root'));
 

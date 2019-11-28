@@ -2,13 +2,13 @@ import react from "react"
 import ReactDOM from "react-dom"
 import 'antd/dist/antd.css';
 
-import { Table } from 'antd';
-import { Resizable } from 'react-resizable';
+import {Table} from 'antd';
+import {Resizable} from 'react-resizable';
 
 import "./resize-col.less"
 
 const ResizeableTitle = props => {
-    const { onResize, width, ...restProps } = props;
+    const {onResize, width, ...restProps} = props;
 
     if (!width) {
         return <th {...restProps} />;
@@ -19,7 +19,7 @@ const ResizeableTitle = props => {
             width={width}
             height={0}
             onResize={onResize}
-            draggableOpts={{ enableUserSelectHack: false }}
+            draggableOpts={{enableUserSelectHack: false}}
         >
             <th {...restProps} />
         </Resizable>
@@ -33,21 +33,25 @@ class Demo extends React.Component {
                 title: 'Date',
                 dataIndex: 'date',
                 width: 200,
+                // minWidth: 200,
             },
             {
                 title: 'Amount',
                 dataIndex: 'amount',
                 width: 100,
+                // minWidth: 100,
             },
             {
                 title: 'Type',
                 dataIndex: 'type',
                 width: 100,
+                // minWidth: 100,
             },
             {
                 title: 'Note',
                 dataIndex: 'note',
                 width: 100,
+                // minWidth: 100,
             },
             {
                 title: 'Action',
@@ -87,14 +91,14 @@ class Demo extends React.Component {
         },
     ];
 
-    handleResize = index => (e, { size }) => {
-        this.setState(({ columns }) => {
+    handleResize = index => (e, {size}) => {
+        this.setState(({columns}) => {
             const nextColumns = [...columns];
             nextColumns[index] = {
                 ...nextColumns[index],
                 width: size.width,
             };
-            return { columns: nextColumns };
+            return {columns: nextColumns};
         });
     };
 
@@ -107,8 +111,8 @@ class Demo extends React.Component {
             }),
         }));
 
-        return <Table bordered components={this.components} columns={columns} dataSource={this.data} />;
+        return <Table bordered components={this.components} columns={columns} dataSource={this.data}/>;
     }
 }
 
-ReactDOM.render(<Demo />, mountNode);
+ReactDOM.render(<Demo/>, document.getElementById('root'));

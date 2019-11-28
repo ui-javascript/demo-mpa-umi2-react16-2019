@@ -25,6 +25,7 @@ export default {
 
     // antd组件用例
     // entry: './_antd/upload/*.js',
+    // entry: './_antd/form/*.js',
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
 

@@ -6,6 +6,7 @@
     "build": "umi build"
   },
   "dependencies": {
+    "@antv/g2plot": "^0.11.1",
     "@babel/polyfill": "^7.7.0",
     "@formatjs/intl-pluralrules": "^1.3.2",
     "@types/react-dom": "^16.9.4",
@@ -45,6 +46,7 @@
     "react-use": "^13.6.2",
     "reqwest": "^2.0.5",
     "styled-components": "^4.4.1",
+    "swr": "^0.1.12",
     "tailwindcss": "^1.1.3",
     "typescript": "^3.7.2",
     "umi": "^2.11.3",
