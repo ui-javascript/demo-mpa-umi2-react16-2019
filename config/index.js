@@ -26,7 +26,7 @@ export default {
 
     // 日常一波增删改查
     // entry: './_crud/form-render/*.js',
-    entry: './_crud/antd-schema-form/*.js',
+    // entry: './_crud/antd-schema-form/*.js',
 
     // 地图
     // entry: './_map/amap/**/*.js',
@@ -37,6 +37,9 @@ export default {
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
 
+    // uxcore组件用例
+    entry: './_uxcore/*.js',
+
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
     // entry: './_fetch/axios/*.js',
@@ -45,7 +48,7 @@ export default {
     // entry: './_tricks/**/*.js',
 
     // landing页
-    // entry: './_landing/antd-landing/index.js',
+    // entry: './_landing/antd-landing/table.js',
 
     // 动画
     // entry: './_animation/react-spring/*.js',
