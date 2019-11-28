@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import "./useToggle.scss"
+import "./demo-useToggle.scss"
 import { Button, Switch } from 'antd';
 import { useToggle } from '@umijs/hooks';
 

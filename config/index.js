@@ -11,6 +11,8 @@ export default {
     // entry: './_demo/module/*.{js,tsx}',
 
     // hooks-轮子测试
+    // entry: './_hooks/**/*.{js,ts,tsx}',
+    entry: './_hooks/sunflower/*.js',
     // entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
     // entry: './_hooks/react-use/*.js',
 
@@ -18,10 +20,15 @@ export default {
     // entry: './_umi/*.js',
 
     // 图表
-    entry: './_charts/g2-plot/*.js',
+    // entry: './_charts/g2-plot/*.js',
+    // entry: './_charts/d3-vx/**/*.js',
+    // entry: './_charts/echarts/**/*.js',
 
     // 日常一波增删改查
     // entry: './_crud/form-render/*.js',
+
+    // 地图
+    // entry: './_map/amap/**/*.js',
 
     // antd组件用例
     // entry: './_antd/upload/*.js',

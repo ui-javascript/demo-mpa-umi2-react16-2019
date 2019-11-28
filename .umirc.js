@@ -19,8 +19,8 @@ function isProd () {
 }
 
 function shouldReadAsEntry(moduleName) {
-  // 是否小写字母开头
-  return moduleName.charAt(0).match(/^.*[a-z]+.*$/)
+  // 是否小写字母开头 并且不以use开头
+  return moduleName.charAt(0).match(/^.*[a-z]+.*$/) && moduleName.indexOf("use") !== 0
 }
 
 function getEntry(globPath) {

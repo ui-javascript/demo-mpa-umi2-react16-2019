@@ -21,6 +21,7 @@ function App() {
 ReactDOM.render(<App />, mountNode);
 ```
 
+- 入口: entry开头为小写字母且不是`use`
 - 如果创建和`entry`同名的.ejs文件，会覆盖默认模板(优先级更高)
 - 如果不创建`index`的入口，umi-plugin-mpa会自动生成index.html(简单的url地址导航页)
 - 使用到`react-hooks`功能的部分, 需要引入react-dom, 否则估计会报错!! 

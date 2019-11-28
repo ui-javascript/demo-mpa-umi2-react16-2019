@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/tailwindcss/0.7.3/utilities.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">-->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <style>
+        .amap-logo {
+            display: none;
+            opacity: 0 !important;
+        }
+        .amap-copyright {
+            opacity: 0;
+        }
+        .amap-icon {
+            display: none;
+            opacity: 0 !important;
+        }
+        .amap-container {
+            background-color: red!important;
+        }
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=9b6ea973437f5253aa99de5a63d9e90c&plugin=AMap.DistrictLayer,Map3D,AMap.DistrictSearch"></script>
+    <!--    <script src="https://webapi.amap.com/maps?v=1.4.15&key=9b6ea973437f5253aa99de5a63d9e90c"></script>-->
+    <script src="https://a.amap.com/Loca/static/mock/adcodes.js"></script>
+    <script>
+      // @deprecated
+      // window.amapkey = '9b6ea973437f5253aa99de5a63d9e90c'
+      // window.AMap = AMap
+      // window.AMap.DistrictLayer = AMap.DistrictLayer
+      // var AMapDistrictLayer = new AMap.DistrictLayer
+      // console.log(AMapDistrictLayer)
+    </script>
+
+</head>
+<body>
+
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+
+
+<div id="root"></div>
+
+</body>
+</html>
