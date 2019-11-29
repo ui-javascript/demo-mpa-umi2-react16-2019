@@ -1,6 +1,6 @@
 export default {
     // 默认模板位置
-    template: './template/template-cdn.ejs',
+    template: './template/template-cdn-antd.ejs',
 
     // 默认meta位置
     meta: "./template/template.json",
@@ -37,14 +37,17 @@ export default {
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
 
-    // uxcore-组件用例
+    // evergreen-组件用例
+    entry: './_material-ui/*.js',
+
+    // uxcore-组件用例 @minor
     // entry: './_uxcore/*.js',
 
     // evergreen-组件用例
     // entry: './_evergreen/*.js',
 
     // evergreen-组件用例
-    entry: './_blueprint/*.js',
+    // entry: './_blueprint/*.js',
 
     // ice-组件用例
     // entry: './_ice-ui/*.js',
