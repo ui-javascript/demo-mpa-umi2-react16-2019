@@ -37,11 +37,8 @@ export default {
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
 
-    // evergreen-组件用例
-    entry: './_material-ui/*.js',
-
-    // uxcore-组件用例 @minor
-    // entry: './_uxcore/*.js',
+    // material-ui-组件用例
+    // entry: './_material-ui/*.js',
 
     // evergreen-组件用例
     // entry: './_evergreen/*.js',
@@ -51,6 +48,12 @@ export default {
 
     // ice-组件用例
     // entry: './_ice-ui/*.js',
+
+    // chakra-ui-组件用例
+    entry: './_chakra-ui/*.js',
+
+    // uxcore-组件用例 @minor
+    // entry: './_uxcore/*.js',
 
     // fetch请求
     // entry: './_fetch/reqwest/*.js',

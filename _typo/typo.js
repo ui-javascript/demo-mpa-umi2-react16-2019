@@ -1,1 +1,1 @@
-require('./typo-modified.scss')
+require('./typo.scss')
