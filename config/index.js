@@ -17,7 +17,7 @@ export default {
     // entry: './_hooks/react-use/*.js',
 
     // umi-自带功能测试
-    // entry: './_umi/*.js',
+    // entry: './_umi-dva/*.js',
 
     // 图表
     // entry: './_charts/g2-plot/*.js',
