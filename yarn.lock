@@ -8330,6 +8330,13 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+final-form@^4.18.6:
+  version "4.18.6"
+  resolved "https://registry.npm.taobao.org/final-form/download/final-form-4.18.6.tgz#3539c53d04e6603a0cc11c78dc830755add986d4"
+  integrity sha1-NTnFPQTmYDoMwRx43IMHVa3ZhtQ=
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+
 finalhandler@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/finalhandler/download/finalhandler-1.1.2.tgz#b7e7d000ffd11938d0fdb053506f6ebabe9f587d"
@@ -12563,7 +12570,7 @@ mobx-react@^6.1.4:
 
 mobx@^5.15.0:
   version "5.15.0"
-  resolved "https://registry.npm.taobao.org/mobx/download/mobx-5.15.0.tgz#3ef34ac4965169698eff6df72f18c2a735e8e7f8"
+  resolved "https://registry.npm.taobao.org/mobx/download/mobx-5.15.0.tgz?cache=0&sync_timestamp=1573166239828&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmobx%2Fdownload%2Fmobx-5.15.0.tgz#3ef34ac4965169698eff6df72f18c2a735e8e7f8"
   integrity sha1-PvNKxJZRaWmO/233LxjCpzXo5/g=
 
 moment@2.x, moment@^2.17.1, moment@^2.22.0, moment@^2.22.1, moment@^2.22.2, moment@^2.24.0:
@@ -15860,6 +15867,14 @@ react-fast-compare@^2.0.1, react-fast-compare@^2.0.2, react-fast-compare@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npm.taobao.org/react-fast-compare/download/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha1-6EtNRVsP7BE+BALDKTUnFRlvgfk=
+
+react-final-form@^6.3.3:
+  version "6.3.3"
+  resolved "https://registry.npm.taobao.org/react-final-form/download/react-final-form-6.3.3.tgz#8856a92278de2733f83e88c75d9ef347294a66a0"
+  integrity sha1-iFapInjeJzP4PojHXZ7zRylKZqA=
+  dependencies:
+    "@babel/runtime" "^7.4.5"
+    ts-essentials "^3.0.2"
 
 react-focus-lock@^2.1.0:
   version "2.2.1"
@@ -19297,6 +19312,11 @@ ts-easing@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npm.taobao.org/ts-easing/download/ts-easing-0.2.0.tgz#c8a8a35025105566588d87dbda05dd7fbfa5a4ec"
   integrity sha1-yKijUCUQVWZYjYfb2gXdf7+lpOw=
+
+ts-essentials@^3.0.2:
+  version "3.0.5"
+  resolved "https://registry.npm.taobao.org/ts-essentials/download/ts-essentials-3.0.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fts-essentials%2Fdownload%2Fts-essentials-3.0.5.tgz#34a45f9f2b3817ed6756a4a876a0543a1cedc12a"
+  integrity sha1-NKRfnys4F+1nVqSodqBUOhztwSo=
 
 ts-loader@6.0.3:
   version "6.0.3"

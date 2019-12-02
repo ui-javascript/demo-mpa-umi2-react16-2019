@@ -27,6 +27,8 @@ export default {
     // 日常一波增删改查
     // entry: './_crud/form-render/*.js',
     // entry: './_crud/antd-schema-form/*.js',
+    entry: './_crud/final-form/*.js',
+    // entry: './_crud/validate/*.js',
 
     // 地图
     // entry: './_map/amap/**/*.js',
@@ -50,7 +52,7 @@ export default {
     // entry: './_ice-ui/*.js',
 
     // chakra-ui-组件用例
-    entry: './_chakra-ui/*.js',
+    // entry: './_chakra-ui/*.js',
 
     // uxcore-组件用例 @minor
     // entry: './_uxcore/*.js',

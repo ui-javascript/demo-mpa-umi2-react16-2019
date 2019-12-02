@@ -25,7 +25,7 @@ function App() {
 
 
       <div className={"mt-2"}>
-        <input name="age" ref={register({ pattern: /\d+/ })} />
+        <input name="age" placeholder="age, should be number" ref={register({ pattern: /\d+/ })} />
         {errors.age && 'Please enter number for age.'}
       </div>
 
