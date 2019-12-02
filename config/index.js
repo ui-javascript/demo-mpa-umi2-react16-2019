@@ -27,8 +27,9 @@ export default {
     // 日常一波增删改查
     // entry: './_crud/form-render/*.js',
     // entry: './_crud/antd-schema-form/*.js',
-    entry: './_crud/final-form/*.js',
+    // entry: './_crud/final-form/*.js',
     // entry: './_crud/validate/*.js',
+    entry: './_crud/uform/*.js',
 
     // 地图
     // entry: './_map/amap/**/*.js',

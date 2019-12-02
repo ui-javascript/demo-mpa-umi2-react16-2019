@@ -2640,6 +2640,90 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
+"@uform/antd@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npm.taobao.org/@uform/antd/download/@uform/antd-1.0.0-alpha.4.tgz#ca695c0d7d0260709c5415c040e639555100bac6"
+  integrity sha1-ymlcDX0CYHCcVBXAQOY5VVEAusY=
+  dependencies:
+    "@uform/react-schema-renderer" "^1.0.0-alpha.4"
+    "@uform/react-shared-components" "^1.0.0-alpha.4"
+    "@uform/shared" "^1.0.0-alpha.4"
+    classnames "^2.2.6"
+    react-eva "^1.0.0-alpha.0"
+    react-stikky "^0.1.15"
+    rxjs "^6.5.1"
+    styled-components "^4.1.1"
+
+"@uform/core@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npm.taobao.org/@uform/core/download/@uform/core-1.0.0-alpha.4.tgz#44adb692a86803c462070e16c0c09c1e6579e4ec"
+  integrity sha1-RK22kqhoA8RiBw4WwMCcHmV55Ow=
+  dependencies:
+    "@uform/shared" "^1.0.0-alpha.4"
+    "@uform/types" "^0.4.0"
+    "@uform/validator" "^1.0.0-alpha.4"
+    immer "^3.2.0"
+
+"@uform/printer@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npm.taobao.org/@uform/printer/download/@uform/printer-1.0.0-alpha.4.tgz#3036f09142da22d22448a62203e79b109bf1d28a"
+  integrity sha1-MDbwkULaItIkSKYiA+ebEJvx0oo=
+  dependencies:
+    "@uform/react-schema-renderer" "^1.0.0-alpha.4"
+    react-modal "^3.8.1"
+    styled-components "^4.1.1"
+
+"@uform/react-schema-renderer@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npm.taobao.org/@uform/react-schema-renderer/download/@uform/react-schema-renderer-1.0.0-alpha.4.tgz#f0b75bd592abbd130fbbd2d1314be539742af405"
+  integrity sha1-8Ldb1ZKrvRMPu9LRMUvlOXQq9AU=
+  dependencies:
+    "@uform/react" "^1.0.0-alpha.4"
+    "@uform/shared" "^1.0.0-alpha.4"
+    "@uform/validator" "^1.0.0-alpha.4"
+    pascal-case "^2.0.1"
+
+"@uform/react-shared-components@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npm.taobao.org/@uform/react-shared-components/download/@uform/react-shared-components-1.0.0-alpha.4.tgz#e56ec57f51642b22925c0042812fc34afc4fabc7"
+  integrity sha1-5W7Ff1FkKyKSXABCgS/DSvxPq8c=
+  dependencies:
+    "@uform/shared" "^1.0.0-alpha.4"
+    "@uform/types" "^0.4.0"
+
+"@uform/react@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npm.taobao.org/@uform/react/download/@uform/react-1.0.0-alpha.4.tgz#510540ece6b661bfb30a8e3998d31196b49e0127"
+  integrity sha1-UQVA7Oa2Yb+zCo45mNMRlrSeASc=
+  dependencies:
+    "@uform/core" "^1.0.0-alpha.4"
+    "@uform/shared" "^1.0.0-alpha.4"
+
+"@uform/shared@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npm.taobao.org/@uform/shared/download/@uform/shared-1.0.0-alpha.4.tgz#171cbd3cc8a3ed2460497c579747c686ac88e8f6"
+  integrity sha1-Fxy9PMij7SRgSXxXl0fGhqyI6PY=
+  dependencies:
+    "@uform/types" "^0.4.0"
+    camel-case "^3.0.0"
+    cool-path "^0.1.1"
+    deepmerge "^4.0.0"
+
+"@uform/types@^0.4.0":
+  version "0.4.4"
+  resolved "https://registry.npm.taobao.org/@uform/types/download/@uform/types-0.4.4.tgz#e23b735cee1716fda44e5cc8ced03b453f00ccfa"
+  integrity sha1-4jtzXO4XFv2kTlzIztA7RT8AzPo=
+  dependencies:
+    rxjs "^6.3.3"
+
+"@uform/validator@^1.0.0-alpha.4":
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npm.taobao.org/@uform/validator/download/@uform/validator-1.0.0-alpha.4.tgz#2b54aee2aaaf83edbc02a557ec21cddfd1bc4896"
+  integrity sha1-K1Su4qqvg+28AqVX7CHN39G8SJY=
+  dependencies:
+    "@uform/shared" "^1.0.0-alpha.4"
+    "@uform/types" "^0.4.0"
+
 "@umijs/error-code-map@^1.0.0":
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/@umijs/error-code-map/download/@umijs/error-code-map-1.0.1.tgz#2a2dd7b4bcd11869e968264ff3dabacfabe8b874"
@@ -5435,6 +5519,11 @@ cookiejar@^2.1.0:
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/cookiejar/download/cookiejar-2.1.2.tgz#dd8a235530752f988f9a0844f3fc589e3111125c"
   integrity sha1-3YojVTB1L5iPmghE8/xYnjERElw=
+
+cool-path@^0.1.1:
+  version "0.1.17"
+  resolved "https://registry.npm.taobao.org/cool-path/download/cool-path-0.1.17.tgz#bca19bce0518509093603a3667365fefffe15ed5"
+  integrity sha1-vKGbzgUYUJCTYDo2ZzZf7//hXtU=
 
 copy-concurrently@^1.0.0:
   version "1.0.5"
@@ -9744,6 +9833,11 @@ immer@^2.1.1:
   resolved "https://registry.npm.taobao.org/immer/download/immer-2.1.5.tgz#0389947455c5a2c7a47f1e6f415c9d1a62a1ebed"
   integrity sha1-A4mUdFXFosekfx5vQVydGmKh6+0=
 
+immer@^3.2.0:
+  version "3.3.0"
+  resolved "https://registry.npm.taobao.org/immer/download/immer-3.3.0.tgz#ee7cf3a248d5dd2d4eedfbe7dfc1e9be8c72041d"
+  integrity sha1-7nzzokjV3S1O7fvn38HpvoxyBB0=
+
 immutability-helper-x@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/immutability-helper-x/download/immutability-helper-x-1.0.5.tgz#cc531668cbb52669c15438383ac93f3324bcd802"
@@ -13613,6 +13707,14 @@ parseurl@~1.3.2, parseurl@~1.3.3:
   resolved "https://registry.npm.taobao.org/parseurl/download/parseurl-1.3.3.tgz#9da19e7bee8d12dff0513ed5b76957793bc2e8d4"
   integrity sha1-naGee+6NEt/wUT7Vt2lXeTvC6NQ=
 
+pascal-case@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/pascal-case/download/pascal-case-2.0.1.tgz?cache=0&sync_timestamp=1575181294942&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpascal-case%2Fdownload%2Fpascal-case-2.0.1.tgz#2d578d3455f660da65eca18ef95b4e0de912761e"
+  integrity sha1-LVeNNFX2YNpl7KGO+VtODekSdh4=
+  dependencies:
+    camel-case "^3.0.0"
+    upper-case-first "^1.1.0"
+
 pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npm.taobao.org/pascalcase/download/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
@@ -15853,6 +15955,13 @@ react-error-overlay@^3.0.0:
   resolved "https://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
   integrity sha1-wryPTZHxN1s9rW11Jl1RzV7q9lU=
 
+react-eva@^1.0.0-alpha.0:
+  version "1.1.7"
+  resolved "https://registry.npm.taobao.org/react-eva/download/react-eva-1.1.7.tgz#fcb1c028240b351a732cd0e105b47e8dabd04b0e"
+  integrity sha1-/LHAKCQLNRpzLNDhBbR+javQSw4=
+  dependencies:
+    rxjs "^6.3.3"
+
 react-event-listener@^0.5.1:
   version "0.5.10"
   resolved "https://registry.npm.taobao.org/react-event-listener/download/react-event-listener-0.5.10.tgz#378403c555fe616f312891507a742ecbbe2c90de"
@@ -15987,6 +16096,16 @@ react-loading-skeleton@^1.3.0:
   integrity sha1-4la7UyJxLILd+G7hbgUw67fU80c=
   dependencies:
     emotion "^10.0.17"
+
+react-modal@^3.8.1:
+  version "3.11.1"
+  resolved "https://registry.npm.taobao.org/react-modal/download/react-modal-3.11.1.tgz#2a0d6877c9e98f123939ea92d2bb4ad7fa5a17f9"
+  integrity sha1-Kg1od8npjxI5OeqS0rtK1/paF/k=
+  dependencies:
+    exenv "^1.2.0"
+    prop-types "^15.5.10"
+    react-lifecycles-compat "^3.0.0"
+    warning "^4.0.3"
 
 react-motion@^0.5.2:
   version "0.5.2"
@@ -16244,6 +16363,14 @@ react-spring@^8.0.27:
   dependencies:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
+
+react-stikky@^0.1.15:
+  version "0.1.30"
+  resolved "https://registry.npm.taobao.org/react-stikky/download/react-stikky-0.1.30.tgz#20b159455fc7d28a26b48e25319b70a3129f680e"
+  integrity sha1-ILFZRV/H0oomtI4lMZtwoxKfaA4=
+  dependencies:
+    classnames "^2.2.6"
+    window-scroll "^1.0.0"
 
 react-table@^7.0.0-beta.12:
   version "7.0.0-beta.12"
@@ -17391,7 +17518,7 @@ rx-lite@*, rx-lite@^4.0.8:
   resolved "https://registry.npm.taobao.org/rx-lite/download/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
   integrity sha1-Cx4Rr4vESDbwSmQH6S2kJGe3lEQ=
 
-rxjs@^6.4.0:
+rxjs@^6.3.3, rxjs@^6.4.0, rxjs@^6.5.1, rxjs@^6.5.3:
   version "6.5.3"
   resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.5.3.tgz?cache=0&sync_timestamp=1568815796923&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frxjs%2Fdownload%2Frxjs-6.5.3.tgz#510e26317f4db91a7eb1de77d9dd9ba0a4899a3a"
   integrity sha1-UQ4mMX9NuRp+sd532d2boKSJmjo=
@@ -18518,7 +18645,7 @@ style-utils@~0.2.0:
   resolved "https://registry.npm.taobao.org/style-utils/download/style-utils-0.2.0.tgz#3d8614931b8ff6e1eea0545f1dbfaf271bb1aa7e"
   integrity sha1-PYYUkxuP9uHuoFRfHb+vJxuxqn4=
 
-styled-components@^4.4.0, styled-components@^4.4.1:
+styled-components@^4.1.1, styled-components@^4.4.0, styled-components@^4.4.1:
   version "4.4.1"
   resolved "https://registry.npm.taobao.org/styled-components/download/styled-components-4.4.1.tgz#e0631e889f01db67df4de576fedaca463f05c2f2"
   integrity sha1-4GMeiJ8B22ffTeV2/trKRj8FwvI=
@@ -20190,6 +20317,13 @@ uploadcore@~2.3.0:
   resolved "https://registry.npm.taobao.org/uploadcore/download/uploadcore-2.3.3.tgz#73371dd8e83266fcadf99c40fc12c85a23148121"
   integrity sha1-czcd2OgyZvyt+ZxA/BLIWiMUgSE=
 
+upper-case-first@^1.1.0:
+  version "1.1.2"
+  resolved "https://registry.npm.taobao.org/upper-case-first/download/upper-case-first-1.1.2.tgz#5d79bedcff14419518fd2edb0a0507c9b6859115"
+  integrity sha1-XXm+3P8UQZUY/S7bCgUHybaFkRU=
+  dependencies:
+    upper-case "^1.1.1"
+
 upper-case@^1.1.1:
   version "1.1.3"
   resolved "https://registry.npm.taobao.org/upper-case/download/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
@@ -21807,6 +21941,11 @@ widest-line@^2.0.0:
   integrity sha1-dDh2RzDsfvQ4HOTfgvuYpTFCo/w=
   dependencies:
     string-width "^2.1.1"
+
+window-scroll@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/window-scroll/download/window-scroll-1.0.0.tgz#6c0c48c6208f9061ed90e10f658913a991b18987"
+  integrity sha1-bAxIxiCPkGHtkOEPZYkTqZGxiYc=
 
 window-size@0.1.0:
   version "0.1.0"
