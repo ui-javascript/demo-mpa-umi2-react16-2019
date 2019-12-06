@@ -26,7 +26,6 @@ function shouldReadAsEntry(moduleName) {
 function getEntry(globPath) {
   let entries = {}
 
-
   glob.sync(globPath).forEach(function (entry) {
 
     // 切割路径 --> [ '.', '_project', 'module', 'foo.js' ]

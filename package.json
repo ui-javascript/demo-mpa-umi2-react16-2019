@@ -100,6 +100,7 @@
     "reqwest": "^2.0.5",
     "reselect": "^4.0.0",
     "rxjs": "^6.5.3",
+    "rxjs-hooks": "^0.5.2",
     "sunflower-antd": "^0.9.0",
     "swr": "^0.1.12",
     "tailwindcss": "^1.1.3",
