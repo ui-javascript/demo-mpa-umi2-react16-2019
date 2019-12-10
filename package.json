@@ -29,6 +29,7 @@
     "@vx/mock-data": "^0.0.192",
     "@vx/scale": "^0.0.192",
     "@vx/shape": "^0.0.192",
+    "amis": "^1.0.8",
     "antd": "^3.25.1",
     "antd-doddle": "^1.1.0",
     "antd-password-input-strength": "^1.1.1",
