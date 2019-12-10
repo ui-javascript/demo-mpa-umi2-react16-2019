@@ -19,7 +19,10 @@ function App() {
 
   useEffect(() => {
       // 父组件可以调用子组件DOM
-    inputRef.current.focus();
+    setTimeout(() => {
+      inputRef.current.focus();
+    }, 2000)
+
   }, []);
 
   return (

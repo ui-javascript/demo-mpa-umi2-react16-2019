@@ -15,7 +15,8 @@ export default {
     // entry: './_hooks/sunflower/*.js',
     // entry: './_hooks/umi-hooks/*.{js,ts,tsx}',
     // entry: './_hooks/react-use/*.js',
-    entry: './_hooks/rxjs-hooks/*.js',
+    // entry: './_hooks/rxjs-hooks/*.js',
+    entry: './_hooks/basics/*.js',
 
     // umi-自带功能测试
     // entry: './_umi-dva/*.js',
