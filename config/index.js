@@ -24,7 +24,7 @@ export default {
     // 图表
     // entry: './_charts/g2-plot/*.js',
     // entry: './_charts/d3-vx/**/*.js',
-    // entry: './_charts/echarts/**/*.js',
+    // entry: './_charts/echarts-for-react/**/*.js',
 
     // 日常一波增删改查
     // entry: './_crud/form-render/*.js',
