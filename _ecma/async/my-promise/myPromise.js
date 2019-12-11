@@ -19,6 +19,7 @@ class MyPromise {
         this._status = PENDING
         // 添加状态
         this._value = undefined
+
         // 添加成功回调函数队列
         this._fulfilledQueues = []
         // 添加失败回调函数队列
@@ -50,6 +51,7 @@ class MyPromise {
                     cb(error)
                 }
             }
+
             /* 如果resolve的参数为Promise对象，则必须等待该Promise对象状态改变后,
               当前Promsie的状态才会改变，且状态取决于参数Promsie对象的状态
             */
@@ -69,6 +71,7 @@ class MyPromise {
                 runFulfilled(val)
             }
         }
+
         // 为了支持同步的Promise，这里采用异步调用
         setTimeout(run, 0)
     }
@@ -76,6 +79,7 @@ class MyPromise {
     // 添加reject时执行的函数
     _reject (err) {
         if (this._status !== PENDING) return
+
         // 依次执行失败队列中的函数，并清空队列
         const run = () => {
             this._status = REJECTED

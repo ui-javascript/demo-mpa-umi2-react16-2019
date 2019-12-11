@@ -89,6 +89,6 @@ export default {
     // entry: './_table/react-table/*.js',
 
     // Ecma-代码测试
-    entry: './_ecma/yield/browser-fetch-yield-demo.js',
+    entry: './_ecma/async/yield/browser-fetch-yield-demo.js',
 
 }
