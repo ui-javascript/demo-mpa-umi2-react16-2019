@@ -66,7 +66,7 @@ export default {
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
     // entry: './_fetch/axios/*.js',
-    entry: './_fetch/swr/*.js',
+    // entry: './_fetch/swr/*.js',
 
     // react-小技巧
     // entry: './_tricks/**/*.js',
@@ -87,4 +87,8 @@ export default {
 
     // 表格
     // entry: './_table/react-table/*.js',
+
+    // Ecma-代码测试
+    entry: './_ecma/yield/browser-fetch-yield-demo.js',
+
 }
