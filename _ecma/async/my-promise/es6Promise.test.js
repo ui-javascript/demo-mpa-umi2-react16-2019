@@ -1,4 +1,4 @@
-const es6Promise = require("./es6Promise")
+const es6Promise = require("./libs/es6Promise")
 
 let p1 = new es6Promise((resolve, reject) => {
     reject('hello error');

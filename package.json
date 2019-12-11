@@ -124,6 +124,7 @@
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "styled-components": "^4.4.1",
+    "traceur": "^0.0.111",
     "typescript": "^3.7.2",
     "umi": "^2.11.3",
     "umi-plugin-mpa": "^1.2.2",
