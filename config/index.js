@@ -34,7 +34,7 @@ export default {
     // entry: './_crud/uform/*.js',
 
     // amis-测试
-    entry: './_amis/**/*.{js,tsx}',
+    // entry: './_amis/**/*.{js,tsx}',
 
     // 地图
     // entry: './_map/amap/**/*.js',
@@ -66,6 +66,7 @@ export default {
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
     // entry: './_fetch/axios/*.js',
+    entry: './_fetch/swr/*.js',
 
     // react-小技巧
     // entry: './_tricks/**/*.js',
@@ -81,8 +82,8 @@ export default {
 
     // 各种工具
     // entry: './_tools/qrcode/*.js',
-    // entry: './_tools/**/*.js',
     // entry: './_tools/react-player/*.js',
+    // entry: './_tools/**/*.js',
 
     // 表格
     // entry: './_table/react-table/*.js',
