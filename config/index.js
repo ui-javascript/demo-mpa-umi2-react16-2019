@@ -45,6 +45,9 @@ export default {
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
 
+    // form-组件测试
+    entry: './_form/**/*.js',
+
     // material-ui-组件用例
     // entry: './_material-ui/*.js',
 
@@ -89,7 +92,7 @@ export default {
     // entry: './_table/react-table/*.js',
 
     // Ecma-代码测试
-    entry: './_ecma/**/browser-*.js',
+    // entry: './_ecma/**/browser-*.js',
     // entry: './_ecma/async/**/browser-*.js',
 
 }

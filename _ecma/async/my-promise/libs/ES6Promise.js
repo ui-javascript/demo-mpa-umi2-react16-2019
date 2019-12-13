@@ -1,4 +1,4 @@
-class es6Promise {
+class ES6Promise {
 
     constructor(fn) {
         this.status = 'Pending'
@@ -32,6 +32,6 @@ class es6Promise {
     }
 }
 
-module.exports = es6Promise
+module.exports = ES6Promise
 
 

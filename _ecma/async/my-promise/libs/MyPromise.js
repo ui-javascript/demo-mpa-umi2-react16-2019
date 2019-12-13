@@ -44,6 +44,7 @@ class MyPromise {
                     cb(value)
                 }
             }
+
             // 依次执行失败队列中的函数，并清空队列
             const runRejected = (error) => {
                 let cb;

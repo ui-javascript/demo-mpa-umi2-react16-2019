@@ -9,5 +9,15 @@ let p1 = new myPromise((resolve, reject) => {
         resolve('hello promise')
     }, 1000)
 })
+
+let p2 = new myPromise((resolve, reject) => {
+    resolve('数据');
+
+    setTimeout(() => {
+        console.log('hello promise')
+    }, 1000)
+})
+
 p1.then((data) => console.log(data), (err) => console.log(err))
+p2.then((data) => console.log(data), (err) => console.log(err))
 

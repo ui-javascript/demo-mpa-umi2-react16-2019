@@ -20,7 +20,7 @@ function App() {
 ReactDOM.render(<App />, mountNode);
 ```
 
-- 入口js: 开头为小写字母且不是`use`的js文件 --> 在config.js进行路径匹配
+- 入口js: 开头为小写字母且不是`use`的js文件 --> 在config/index.js进行路径匹配
 - 如果创建和js同名的`.ejs`文件，优先级更高，会覆盖默认模板 --> umi-plugin-mpa实现
 - 如果不创建`index.js`入口，umi-plugin-mpa会默认生成index.html(`url导航`)
 - 使用到`react-hooks`功能的部分, 需要引入react-dom, 否则估计会报错!! 
