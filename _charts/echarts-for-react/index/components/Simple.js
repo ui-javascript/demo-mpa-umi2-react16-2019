@@ -66,20 +66,9 @@ export default class Simple extends PureComponent {
     //       "  option={this.getOption()} \n" +
     //       "  style={{height: '350px', width: '100%'}}  \n" +
     //       "  className='react_for_echarts' />";
-    return (
-      <div className='examples'>
-        <div className='parent'>
-          {/*<label> render a Simple echart With <strong>option and height</strong>: </label>*/}
-          <ReactEcharts
-            option={this.getOption()}
-            style={{height: '350px', width: '100%'}}
-            className='react_for_echarts' />
-          {/*<label> code below: </label>*/}
-          {/*<pre>*/}
-            {/*<code>{code}</code>*/}
-          {/*</pre>*/}
-        </div>
-      </div>
-    );
+    return (<ReactEcharts
+      option={this.getOption()}
+      style={{height: '350px', width: '100%'}}
+      className='react_for_echarts' />);
   }
 }
