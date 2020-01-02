@@ -24,7 +24,7 @@ export default {
     // 图表
     // entry: './_charts/g2-plot/*.js',
     // entry: './_charts/d3-vx/**/*.js',
-    entry: './_charts/echarts-for-react/**/*.js',
+    // entry: './_charts/echarts-for-react/**/*.js',
 
     // 日常一波增删改查
     // entry: './_crud/form-render/*.js',
@@ -44,6 +44,8 @@ export default {
     // entry: './_antd/form/*.js',
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
+    entry: './_antd/table/editable-row*.js',
+
 
     // form-组件测试
     // entry: './_form/**/*.js',
