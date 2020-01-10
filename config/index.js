@@ -44,7 +44,8 @@ export default {
     // entry: './_antd/form/*.js',
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
-    entry: './_antd/table/editable/*.js',
+    entry: './_antd/table/editable*.js',
+    // entry: './_antd/tree/*.js',
 
 
     // form-组件测试

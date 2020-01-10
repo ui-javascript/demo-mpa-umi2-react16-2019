@@ -6,49 +6,61 @@ const EditableContext = React.createContext();
 
 const EditableRow = ({ form, ...props }) => (
     <EditableContext.Provider value={form}>
-        <tr {...props} />
+        <tr {...props}
+            // // 鼠标移入行
+            // onMouseEnter={event => {
+            //
+            // }}
+            // onMouseLeave={event => {
+            //     handleSave(form, record.id, record)
+            // }}
+        />
     </EditableContext.Provider>
 );
 
-let formRef = null
+
+const data = [];
+for (let i = 0; i <1000; i++) {
+    data.push({
+        id: i.toString(),
+        name: `${i}`,
+        age: 32,
+        address: `${i}` * 10,
+    });
+}
+
+const globalForm = {}
 
 const EditableFormRow = Form.create()(EditableRow);
 
 class EditableCell extends React.Component {
 
     renderCell = form => {
-        const { children, dataIndex, record, id, editingKey } = this.props;
+        const { children, dataIndex, record, id, editingKey, handleSave, handleSyncEditingKey } = this.props;
 
-        if (editingKey === record.id) {
-            formRef = form
+        if (!globalForm[editingKey]) {
+            globalForm[editingKey] = form
+          // handleSyncEditingKey(record.id, form)
         }
 
         // debugger
-        return (editingKey === record.id) ? (
+        return (
             <Form.Item style={{ margin: 0 }}>
                 {form.getFieldDecorator(dataIndex, {
                     rules: [
                         // {
                         //     required: true,
-                        //     message: `${title} is required.`,
+                        //     message: `必填`,
                         // },
                     ],
                     initialValue: record[dataIndex],
                 })(<Input
                     ref={node => (this.input = node)}
-                    // onPressEnter={this.save}
-                    // onBlur={this.save}
+                    onPressEnter={() => { handleSave(record.id, record) }}
+                    onBlur={() => { handleSave(record.id, record) }}
                 />)}
             </Form.Item>
-        ) : (
-            <div
-                className="editable-cell-value-wrap"
-                style={{ paddingRight: 24 }}
-                // onClick={this.toggleEdit}
-            >
-                {children}
-            </div>
-        );
+        )
     };
 
     render() {
@@ -63,6 +75,8 @@ class EditableCell extends React.Component {
 
             editingKey,
             handleSave,
+            handleSyncEditingKey,
+
             ...restProps
         } = this.props;
 
@@ -83,70 +97,72 @@ class EditableTable extends React.Component {
         super(props);
         this.columns = [
             {
-                title: 'name',
+                title: '元素1',
                 dataIndex: 'name',
                 // width: '30%',
                 key: 0,
                 editable: true,
+                width: 100,
             },
             {
-                title: 'age',
+                title: '元素2',
                 dataIndex: 'age',
                 editable: true,
                 key: 1,
+                width: 100,
             },
             {
-                title: 'address',
+                title: '计算结果',
                 dataIndex: 'address',
-                editable: true,
+                // editable: true,
                 key: 2,
                 // ellipsis: true,
+                width: 200,
             },
         ];
 
         this.state = {
-            data: [
-                {
-                    id: '0',
-                    name: 'Edward King 0',
-                    age: '32',
-                    address: 'London, Park Lane no. 0',
-                },
-                {
-                    id: '1',
-                    name: 'Edward King 1',
-                    age: '32',
-                    address: 'London, Park Lane no. 1',
-                },
-            ],
-            count: 2,
+            data: data,
             editingKey: '',
+            loading: false,
         };
+
+        this.formRef = {}
 
     }
 
+    handleSyncEditingKey = (key) => {
+        this.setState({
+            editingKey: key,
+        })
+    }
+    
+    handleSave = async (key, record) => {
 
-    handleSave = (key, record) => {
+        if (globalForm[key]) {
+            const row = await globalForm[key].validateFields().catch(error => console.log(error))
+            // console.log(row)
 
-        // debugger
-        formRef && formRef.validateFields((error, row) => {
-            if (error) {
-                this.setState({
-                    editingKey: ''
-                })
-                return;
-            }
+            // if (error) {
+            //     this.setState({
+            //         editingKey: ''
+            //     })
+            //     return;
+            // }
 
             if (isEqual(Object.assign({}, record, row), record)) {
-                console.log('数据没啥变化')
+                // console.log('数据没啥变化')
                 this.setState({
                     editingKey: ''
                 })
+
                 return;
             }
 
+
             console.log(Object.assign({}, record, row))
-            console.log(record)
+            // console.log(record)
+            console.log('--------------------')
             const newData = [...this.state.data];
             const index = newData.findIndex(item => key === item.id);
             console.log(`修改第${index}行`)
@@ -158,15 +174,25 @@ class EditableTable extends React.Component {
                     ...row,
                 });
 
-                this.setState({
-                    data: newData,
-                    editingKey: ''
-                });
+                // 立刻更新界面
+                // this.setState({
+                //     data: newData,
+                //     editingKey: '',
+                //     // loading: true,
+                // });
 
-                // console.log({
-                //     ...item,
-                //     ...row,
-                // })
+                // 假装是请求回来的结果
+                setTimeout(() => {
+                    console.log('我更新了~~')
+                    this.setState({
+                        data: newData,
+                        editingKey: '',
+                        // loading: false
+                    });
+                }, 1000)
+
+                return
+
             }
 
             // else {
@@ -179,25 +205,17 @@ class EditableTable extends React.Component {
             })
             return;
 
-        });
+        }
 
     }
 
-    // handleSave = row => {
-    //     const newData = [...this.state.data];
-    //     const index = newData.findIndex(item => row.key === item.key);
-    //     const item = newData[index];
-    //     newData.splice(index, 1, {
-    //         ...item,
-    //         ...row,
-    //     });
-    //     this.setState({ data: newData });
-    // };
+
 
     render() {
         const {
             data,
             editingKey,
+            loading,
         } = this.state;
 
         const components = {
@@ -222,6 +240,7 @@ class EditableTable extends React.Component {
                     editingKey: editingKey,
                     id: col.id,
                     handleSave: this.handleSave,
+                    handleSyncEditingKey: this.handleSyncEditingKey,
                 }),
             };
         });
@@ -234,24 +253,29 @@ class EditableTable extends React.Component {
                     components={components}
                     rowClassName={() => 'editable-row'}
                     bordered
+                    loading={loading}
                     dataSource={data}
                     columns={columns}
                     pagination={false}
                     rowKey={(record) => record.id }
-                    onRow={record => {
-                        return {
-                            // 鼠标移入行
-                            onMouseEnter: event => {
-                                // debugger
-                                this.setState({
-                                    editingKey: record.id
-                                })
-                            },
-                            onMouseLeave: event => {
-                                this.handleSave(editingKey, record)
-                            },
-                        };
-                    }}
+                    // onRow={record => {
+                    //     return {
+                    //         // // 鼠标移入行
+                    //         // onMouseEnter: event => {
+                    //         //     // console.log(event)
+                    //         //     // this.setState({
+                    //         //     //     editingKey: record.id
+                    //         //     // })
+                    //         // },
+                    //         // onMouseLeave: event => {
+                    //         //     this.handleSave(editingKey, record)
+                    //         // },
+                    //
+                    //         // handleSave: this.handleSave,
+                    //         // handleSyncEditingKey: this.handleSyncEditingKey,
+                    //         // record: record,
+                    //     };
+                    // }}
                 />
             </div>
         );
