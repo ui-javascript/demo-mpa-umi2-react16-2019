@@ -44,7 +44,7 @@ export default {
     // entry: './_antd/form/*.js',
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
-    entry: './_antd/table/editable*.js',
+    // entry: './_antd/table/editable/*.js',
     // entry: './_antd/tree/*.js',
 
 
@@ -68,6 +68,14 @@ export default {
 
     // uxcore-组件用例 @minor
     // entry: './_uxcore/*.js',
+    // entry: './_uxcore/table*.js',
+
+    // rsuite
+    // entry: './_rsuite/table/*.js',
+
+    // 杂项
+    entry: './_misc/**/*.js',
+
 
     // eui
     // entry: './_eui/*.js',

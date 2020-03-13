@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/favicon.png" type="image/x-icon" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/tailwindcss/0.7.3/utilities.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.4/css/layui.css">
+    <link rel="/plugins/treeTable/treeTable.css">
+
+</head>
+<body>
+
+
+<div id="root" class="p-5"></div>
+
+<script>
+  // 用于挂载
+  var mountNode = document.getElementById('root')
+</script>
+
+<script src="/plugins/layui/layui.js"></script>
+<script>
+  // 自定义模块，这里只需要开放soulTable即可
+  layui.config({
+    base: '/plugins/',   // 模块所在目录
+    version: 'v1.5.2' // 插件版本号
+  }).extend({
+    treeTable: 'treeTable/treeTable',
+  });
+</script>
+
+</body>
+</html>

@@ -11,7 +11,7 @@ import { RadioGroup } from 'uxcore';
 const RadioItem = RadioGroup.Item;
 import { Table } from 'uxcore';
 const { Constants } = Table;
-const mockData = {
+const mockData =  {
     data: [
         {
             email: 'xw@abc.com',
@@ -19,16 +19,19 @@ const mockData = {
             name: '小王',
             cityId: 'bj',
             city: '北京',
-        },
-        {
-            email: 'xl@abc.com',
-            nameId: 'xiaoli',
-            name: '小李',
-            cityId: 'hz',
-            city: '杭州',
-        },
-    ],
-};
+        }
+    ]
+}
+
+for (let i = 0; i < 1000; i++) {
+    mockData.data.push({
+        email: 'xl@abc.com',
+        nameId: 'xiaoli',
+        name: '小李',
+        cityId: 'hz',
+        city: '杭州',
+    })
+}
 
 class Demo extends React.Component {
 
@@ -53,36 +56,43 @@ class Demo extends React.Component {
         const me = this;
         const columns = [
             { dataKey: 'jsxid', title: 'jsxid', width: 80 },
-            { dataKey: 'city',
+            {
+                dataKey: 'city',
                 editKey: 'cityId',
                 title: '城市',
                 width: 200,
                 type: 'select',
                 renderChildren: () => [{ id: 'bj', name: '北京' }, { id: 'hz', name: '杭州' }].map(item => <Option key={item.id}>{item.name}</Option>),
-                config: { filterOption: false } },
-            { dataKey: 'name',
+                config: {
+                  filterOption: false
+                }
+            },
+            {
+                dataKey: 'name',
                 editKey: 'nameId',
                 title: '姓名',
                 width: 200,
                 type: 'radio',
-                renderChildren: () => [{ id: 'xiaoli', name: '小李' }, { id: 'xiaowang', name: '小王' }].map(item => <RadioItem key={item.id} text={item.name} value={item.id} />) },
-            {
-                dataKey: 'email',
-                title: 'Email',
-                width: 200,
-                type: 'text',
-                required: true,
-                rules: (cellData) => {
-                    if (cellData.length === 0) {
-                        return '不能为空';
-                    }
-                    if (!Validator.isEmail(cellData)) {
-                        return '必须是一个合法的邮件地址';
-                    }
-                    return true;
-                },
+                renderChildren: () => [{ id: 'xiaoli', name: '小李' }, { id: 'xiaowang', name: '小王' }].map(item => <RadioItem key={item.id} text={item.name} value={item.id} />)
             },
-            { dataKey: 'action1',
+            // {
+            //     dataKey: 'email',
+            //     title: 'Email',
+            //     width: 200,
+            //     type: 'text',
+            //     required: true,
+            //     rules: (cellData) => {
+            //         if (cellData.length === 0) {
+            //             return '不能为空';
+            //         }
+            //         if (!Validator.isEmail(cellData)) {
+            //             return '必须是一个合法的邮件地址';
+            //         }
+            //         return true;
+            //     },
+            // },
+            {
+                dataKey: 'action1',
                 title: '操作1',
                 width: 200,
                 type: 'action',
