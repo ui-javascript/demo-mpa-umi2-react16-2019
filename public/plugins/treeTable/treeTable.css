@@ -122,8 +122,9 @@
 }
 
 /* 箭头隐藏 */
+/* @fix 2020-03-13 隐藏箭头 */
 .ew-tree-table-arrow.ew-tree-table-arrow-hide {
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 /* 箭头变加载中状态 */
