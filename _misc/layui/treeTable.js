@@ -1,7 +1,7 @@
 import React, {useEffect} from "react"
 import ReactDOM from "react-dom"
 
-const data = [
+var data = [
   {
     "id": "1",
     "name": "xxx",
@@ -156,7 +156,7 @@ const data = [
 
 
 
-const initTree = () => {
+var initTree = () => {
   layui.config({
     base: '/plugins/',   // 模块所在目录
     version: 'v1.5.2' // 插件版本号
@@ -224,11 +224,11 @@ const initTree = () => {
 
     treeTable.on('row(myTable)', (obj) => {
 
-      const flag = 'DATA_HAS_APPEND_TABLE'
+      var flag = 'DATA_HAS_APPEND_TABLE'
       var $tr = obj.tr
 
       // 判断当前行是否有可供展开的数据
-      const info = $tr.data() || {}
+      var info = $tr.data() || {}
       if (obj.data && !obj.data.children && info.indent != null) {
 
         $tr.toggleClass('ew-tree-table-open')
@@ -241,7 +241,7 @@ const initTree = () => {
         // 标记该行已经追加过表格
         $tr.attr(flag, true)
 
-        const indent = (info.indent + 1) * 21 + 14
+        var indent = (info.indent + 1) * 21 + 14
         console.log(obj)
         // // 得到当前行元素对象
         // console.log(obj.tr)
@@ -309,7 +309,7 @@ const initTree = () => {
     // @fix 允许行冒泡, 修复图标文字的点击问题
     // ew-tree-table-td-single
     $('[lay-filter="myTable"]').find('.ew-tree-tips,.ew-tree-table-td-single,.ew-tree-pack').click(function () {
-      const $tr = $(this).parents('tr')
+      var $tr = $(this).parents('tr')
       $tr.click()
     })
 

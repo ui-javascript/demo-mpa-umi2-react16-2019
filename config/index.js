@@ -1,6 +1,7 @@
 export default {
     // 默认模板位置
     template: './template/template-cdn-antd.ejs',
+    // template: './template/template.ejs',
 
     // 默认meta位置
     meta: "./template/template.json",
@@ -44,7 +45,7 @@ export default {
     // entry: './_antd/form/*.js',
     // entry: './_antd/table/*.js',
     // entry: './_antd/doddle/*.js',
-    // entry: './_antd/table/editable/*.js',
+    // entry: './_antd/table/**/*.js',
     // entry: './_antd/tree/*.js',
 
 
@@ -74,7 +75,7 @@ export default {
     // entry: './_rsuite/table/*.js',
 
     // 杂项
-    entry: './_misc/**/*.js',
+    // entry: './_misc/**/*.js',
 
 
     // eui
@@ -82,6 +83,7 @@ export default {
 
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
+    entry: './_fetch/umi-request/*.js',
     // entry: './_fetch/axios/*.js',
     // entry: './_fetch/swr/*.js',
 
@@ -108,5 +110,4 @@ export default {
     // Ecma-代码测试
     // entry: './_ecma/**/browser-*.js',
     // entry: './_ecma/async/**/browser-*.js',
-
 }

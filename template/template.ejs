@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+
     <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/tailwindcss/0.7.3/utilities.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/antd/3.23.6/antd.min.css" rel="stylesheet">
@@ -14,5 +15,12 @@
 <body>
 
 <div id="root" class="p-5"></div>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  // 用于挂载
+  var mountNode = document.getElementById('root')
+</script>
+
 </body>
 </html>
