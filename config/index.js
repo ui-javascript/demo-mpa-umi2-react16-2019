@@ -33,8 +33,9 @@ export default {
     // entry: './_crud/final-form/*.js',
     // entry: './_crud/validate/*.js',
     // entry: './_crud/uform/*.js',
+    entry: './_formily/*.js',
 
-    // amis-测试
+  // amis-测试
     // entry: './_amis/**/*.{js,tsx}',
 
     // 地图
@@ -83,7 +84,7 @@ export default {
 
     // fetch请求
     // entry: './_fetch/reqwest/*.js',
-    entry: './_fetch/umi-request/*.js',
+    // entry: './_fetch/umi-request/*.js',
     // entry: './_fetch/axios/*.js',
     // entry: './_fetch/swr/*.js',
 
