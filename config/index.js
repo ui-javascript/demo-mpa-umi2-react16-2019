@@ -7,9 +7,9 @@ export default {
     meta: "./template/template.json",
 
     // 路径写法示例
-    // entry: './_demo/**/*.{js,tsx}',
-    // entry: './_demo/*.js',
-    // entry: './_demo/module/*.{js,tsx}',
+    // entry: './__demo/**/*.{js,tsx}',
+    // entry: './__demo/*.js',
+    // entry: './__demo/module/*.{js,tsx}',
 
     // hooks-轮子测试
     // entry: './_hooks/**/*.{js,ts,tsx}',
@@ -33,7 +33,7 @@ export default {
     // entry: './_crud/final-form/*.js',
     // entry: './_crud/validate/*.js',
     // entry: './_crud/uform/*.js',
-    entry: './_formily/*.js',
+    // entry: './_formily/*.js',
 
   // amis-测试
     // entry: './_amis/**/*.{js,tsx}',
@@ -76,7 +76,7 @@ export default {
     // entry: './_rsuite/table/*.js',
 
     // 杂项
-    // entry: './_misc/**/*.js',
+    entry: './_misc/**/*.js',
 
 
     // eui
