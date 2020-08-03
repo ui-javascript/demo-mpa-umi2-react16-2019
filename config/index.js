@@ -6,6 +6,8 @@ export default {
     // 默认meta位置
     meta: "./template/template.json",
 
+
+
     // 路径写法示例
     // entry: './__demo/**/*.{js,tsx}',
     // entry: './__demo/*.js',
@@ -76,7 +78,7 @@ export default {
     // entry: './_rsuite/table/*.js',
 
     // 杂项
-    entry: './_misc/**/*.js',
+    // entry: './_misc/**/*.js',
 
 
     // eui
@@ -111,4 +113,7 @@ export default {
     // Ecma-代码测试
     // entry: './_ecma/**/browser-*.js',
     // entry: './_ecma/async/**/browser-*.js',
+
+   // CSS-demo
+    entry: './_css/*.js',
 }
