@@ -11,6 +11,7 @@ const {Option} = Select;
 import {RadioGroup} from 'uxcore';
 
 const RadioItem = RadioGroup.Item;
+
 import {Table} from 'uxcore';
 
 const {Constants} = Table;
@@ -127,6 +128,7 @@ class Demo extends React.Component {
             title: '删除',
             callback: (rowData) => {
               me.table.delRow(rowData);
+
             },
             mode: Constants.MODE.VIEW,
           },
