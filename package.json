@@ -1,6 +1,7 @@
 {
   "scripts": {
     "install:tyarn": "tyarn install",
+    "install": "npm install",
     "remove": "rimraf node_modules",
     "dev": "umi dev",
     "build": "umi build"
